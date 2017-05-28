@@ -5,7 +5,8 @@ go:
   - tip
 
 script:
-  - go test -race -coverprofile=coverage.txt -covermode=atomic
+  - go test .\chapter-2-creational-patterns\singleton\ -race -coverprofile=coverage.txt -covermode=atomic
+  - go test .\chapter-9-concurrency-patterns\barrier\ -race -coverprofile=coverage.txt -covermode=atomic
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)  
