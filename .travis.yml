@@ -4,11 +4,8 @@ go:
   - 1.8.x
   - tip
 
-env:
-  - TEST_DIR=chapter-2-creational-patterns\singleton
-  - TEST_DIR=chapter-9-concurrency-patterns\barrier
-
-script: cd $TEST_DIR && go test -race -coverprofile=coverage.txt -covermode=atomic
+script:
+  - go test ./... -race -coverprofile=coverage.txt -covermode=atomic
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)  
