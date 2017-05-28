@@ -4,7 +4,7 @@ go:
   - 1.8.x
   - tip
 
-script: ./scripts/run-tests.sh
+script: ./scripts/run-tests-coverage.sh
   
 after_success:
   - bash <(curl -s https://codecov.io/bash)
