@@ -4,6 +4,9 @@ go:
   - 1.8.x
   - tip
 
+before_script:
+  - chmod +x ./scripts/run-tests-coverage.sh  
+
 script: ./scripts/run-tests-coverage.sh
   
 after_success:
